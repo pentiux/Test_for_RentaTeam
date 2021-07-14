@@ -2,7 +2,7 @@ buildscript {
     val kotlinVersion by extra("1.5.21")
     val navVersion by extra("2.4.0-alpha04")
     val roomVersion by extra("2.3.0")
-    val raxJava2 by extra("2.2.21")
+    val rxJava2 by extra("2.2.21")
     val moshiRetrofitVersion by extra("2.9.0")
     val daggerVersion by extra("2.37")
 

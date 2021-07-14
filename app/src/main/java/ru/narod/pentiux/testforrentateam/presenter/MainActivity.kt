@@ -1,7 +1,8 @@
-package ru.narod.pentiux.testforrentateam
+package ru.narod.pentiux.testforrentateam.presenter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ru.narod.pentiux.testforrentateam.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

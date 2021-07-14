@@ -54,6 +54,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:${extras["navVersion"]}")
     // Room
     implementation("androidx.room:room-runtime:${extras["roomVersion"]}")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt("androidx.room:room-compiler:${extras["roomVersion"]}")
     implementation("androidx.room:room-rxjava2:${extras["roomVersion"]}")
     // Picasso
