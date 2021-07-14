@@ -9,10 +9,23 @@
         android:id="@+id/userList"
         android:name="ru.narod.pentiux.testforrentateam.presenter.fragments.UserList"
         android:label="User list"
-        tools:layout="@layout/fragment_user_list" />
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userList_to_userCard"
+            app:destination="@id/userCard" />
+    </fragment>
     <fragment
         android:id="@+id/aboutMyApp"
         android:name="ru.narod.pentiux.testforrentateam.presenter.fragments.AboutMyApp"
         android:label="About my app"
         tools:layout="@layout/fragment_about_my_app" />
+    <fragment
+        android:id="@+id/userCard"
+        android:name="ru.narod.pentiux.testforrentateam.presenter.fragments.UserCard"
+        android:label="fragment_user_card"
+        tools:layout="@layout/fragment_user_card" >
+        <argument
+            android:name="user_info"
+            app:argType="ru.narod.pentiux.testforrentateam.presenter.data.UserListData" />
+    </fragment>
 </navigation>
