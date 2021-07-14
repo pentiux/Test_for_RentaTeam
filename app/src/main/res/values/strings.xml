@@ -5,4 +5,7 @@
     <string name="about">About</string>
     <string name="hello_rentateam">Тестовое задание для Rentateam</string>
     <string name="user_card">user card</string>
+    <string name="first_name">Имя</string>
+    <string name="e_mail">E-Mail:</string>
+    <string name="last_name">Фамилия</string>
 </resources>
