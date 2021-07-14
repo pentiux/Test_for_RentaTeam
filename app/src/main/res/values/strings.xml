@@ -8,4 +8,5 @@
     <string name="first_name">Имя</string>
     <string name="e_mail">E-Mail:</string>
     <string name="last_name">Фамилия</string>
+    <string name="user_photo">Фото пользователя</string>
 </resources>
