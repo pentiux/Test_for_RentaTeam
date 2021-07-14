@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/userList"
         android:name="ru.narod.pentiux.testforrentateam.presenter.fragments.UserList"
-        android:label="fragment_user_list"
+        android:label="User list"
         tools:layout="@layout/fragment_user_list" />
     <fragment
         android:id="@+id/aboutMyApp"
         android:name="ru.narod.pentiux.testforrentateam.presenter.fragments.AboutMyApp"
-        android:label="fragment_about_my_app"
+        android:label="About my app"
         tools:layout="@layout/fragment_about_my_app" />
 </navigation>
