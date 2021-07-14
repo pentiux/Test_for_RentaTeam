@@ -1,4 +1,4 @@
-package ru.narod.pentiux.testforrentateam.repository.entities
+package ru.narod.pentiux.testforrentateam.repository.model.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

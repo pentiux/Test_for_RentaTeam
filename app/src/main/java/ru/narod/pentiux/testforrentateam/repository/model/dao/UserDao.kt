@@ -1,9 +1,9 @@
-package ru.narod.pentiux.testforrentateam.repository.dao
+package ru.narod.pentiux.testforrentateam.repository.model.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import io.reactivex.Flowable
-import ru.narod.pentiux.testforrentateam.repository.entities.UserListEntity
+import ru.narod.pentiux.testforrentateam.repository.model.entities.UserListEntity
 
 @Dao
 interface UserDao {

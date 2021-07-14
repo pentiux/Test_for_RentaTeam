@@ -1,9 +1,9 @@
-package ru.narod.pentiux.testforrentateam.repository.db
+package ru.narod.pentiux.testforrentateam.repository.model.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import ru.narod.pentiux.testforrentateam.repository.entities.UserListEntity
-import ru.narod.pentiux.testforrentateam.repository.dao.UserDao
+import ru.narod.pentiux.testforrentateam.repository.model.entities.UserListEntity
+import ru.narod.pentiux.testforrentateam.repository.model.dao.UserDao
 
 @Database(
     entities = [UserListEntity::class],
