@@ -26,7 +26,7 @@ class UserList : Fragment(R.layout.fragment_user_list) {
         super.onViewCreated(view, savedInstanceState)
 
         val userListAdapter = UserListAdapter { goToUserCard(it) }.apply {
-            submitList(
+            submitList( // TODO написать загрузку списка из БД
                 listOf(
                     UserListData.getRandomData(),
                     UserListData.getRandomData(),
