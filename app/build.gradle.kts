@@ -18,7 +18,7 @@ android {
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -45,8 +45,10 @@ kapt {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${extras["kotlinVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${extras["kotlinVersion"]}")
     implementation("androidx.core:core-ktx:1.6.0")
     implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("androidx.multidex:multidex:2.0.1")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     // Navigation libraries
@@ -54,15 +56,14 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:${extras["navVersion"]}")
     // Room
     implementation("androidx.room:room-runtime:${extras["roomVersion"]}")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt("androidx.room:room-compiler:${extras["roomVersion"]}")
     implementation("androidx.room:room-rxjava2:${extras["roomVersion"]}")
     // Picasso
     implementation("com.squareup.picasso:picasso:2.8")
     // RxJava2
-    implementation("io.reactivex.rxjava2:${extras["rxJava2"]}")
+    implementation("io.reactivex.rxjava2:rxjava:${extras["rxJava2"]}")
     // Retrofit+moshi
-    implementation("com.squareup.moshi:moshi-kotlin:${extras["moshiRetrofitVersion"]}")
+    implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
     implementation("com.squareup.retrofit2:converter-moshi:${extras["moshiRetrofitVersion"]}")
     // Dagger2
     kapt ("com.google.dagger:dagger-compiler:${extras["daggerVersion"]}")
