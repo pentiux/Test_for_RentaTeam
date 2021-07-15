@@ -10,14 +10,4 @@ data class UserListData(
     val firstName: String,
     val lastName: String,
     val avatarUrl: String
-) : Parcelable {
-    companion object {
-        fun getRandomData() = UserListData(
-            id = (0..1000).random(),
-            email = "sdfgkllk@dslkf.re".toList().shuffled().joinToString(""),
-            firstName = "Fsdfdsv".toList().shuffled().joinToString(""),
-            lastName = "asSDFSdfsdasgvncv".toList().shuffled().joinToString(""),
-            avatarUrl = "asSDFSdfsdasgvncv".toList().shuffled().joinToString(""),
-        )
-    }
-}
+) : Parcelable

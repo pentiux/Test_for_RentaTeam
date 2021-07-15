@@ -1,14 +1,14 @@
 package ru.narod.pentiux.testforrentateam.repository
 
-import ru.narod.pentiux.testforrentateam.repository.model.db.UserDatabase
-import ru.narod.pentiux.testforrentateam.repository.network.UserListApiService
-import javax.inject.Inject
-import javax.inject.Singleton
+import io.reactivex.Completable
+import io.reactivex.Flowable
+import ru.narod.pentiux.testforrentateam.repository.model.entities.UserListEntity
 
-@Singleton
-class MyRepository @Inject constructor(
-//    private val userDatabase: UserDatabase,
-//    private val userListApi: UserListApiService
-){
+interface MyRepository {
 
+    fun getUserData(): Flowable<List<UserListEntity>>
+
+    fun deleteAllUserData(): Completable
+
+    fun checkRetrofitErrors(): String
 }

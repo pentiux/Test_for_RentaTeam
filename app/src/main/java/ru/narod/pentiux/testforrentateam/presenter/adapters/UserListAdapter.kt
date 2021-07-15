@@ -1,4 +1,4 @@
-package ru.narod.pentiux.testforrentateam.presenter
+package ru.narod.pentiux.testforrentateam.presenter.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,28 +1,31 @@
 package ru.narod.pentiux.testforrentateam.di
 
-import android.app.Application
-import android.content.Context
-import com.squareup.moshi.Moshi
+import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjectionModule
+import dagger.android.AndroidInjector
 import ru.narod.pentiux.testforrentateam.MyApp
-import ru.narod.pentiux.testforrentateam.repository.MyRepository
-import ru.narod.pentiux.testforrentateam.repository.model.db.UserDatabase
-import ru.narod.pentiux.testforrentateam.repository.network.UserListApiService
+import ru.narod.pentiux.testforrentateam.repository.MyRepositoryImpl
 import javax.inject.Singleton
 
 
 @Singleton
-@Component(modules = [RepositoryModule::class])
-interface ApplicationComponent {
+@Component(modules = [
+    AndroidInjectionModule::class,
+    RepositoryModule::class,
+    FragmentBuilderModule::class,
+    ActivityBuilderModule::class,
+    PresenterModule::class])
+interface ApplicationComponent : AndroidInjector<MyApp> {
+    @Component.Builder
+    interface Builder {
+        @BindsInstance
+        fun application(myApp: MyApp): Builder
 
-    @ApplicationContext
-    fun getContext(): Context
+        fun build(): ApplicationComponent
+    }
 
-    fun provideMoshi(): Moshi
+    fun repository(): MyRepositoryImpl
 
-    fun provideUserListApiService(moshi: Moshi)
-
-    fun providesUserDatabase(context: Context)
-
-    fun repository(): MyRepository
+    override fun inject(app: MyApp)
 }

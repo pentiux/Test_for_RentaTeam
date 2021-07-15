@@ -1,6 +1,5 @@
 package ru.narod.pentiux.testforrentateam.presenter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -8,10 +7,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.android.support.DaggerAppCompatActivity
 import ru.narod.pentiux.testforrentateam.R
 import ru.narod.pentiux.testforrentateam.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
     private val binding get() = checkNotNull(_binding) { "MainActivity: _binding isn't initialized!" }
